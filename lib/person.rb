@@ -10,6 +10,14 @@ class Person
     end
 
     def happiness=(value)
-        @happines =value(0..10)
+        @happiness = value.clamp(0,10)
+    end
+
+    def hygiene=(value)
+        @hygiene = value.clamp(0,10)
+    end
+
+    def happy?(value)
+        value > 7 ? true : false
     end
 end
